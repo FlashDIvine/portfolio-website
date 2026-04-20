@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Saya</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+      html {
+    scroll-behavior: smooth;
+}
+
+.section-active {
+    animation: highlight 0.8s ease;
+}
+
+@keyframes highlight {
+    0% {
+        background-color: rgba(59, 130, 246, 0.2);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* ANIMASI */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full bg-gray-900 shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
+            <h1 class="text-xl font-semibold text-blue-400">MyPortfolio</h1>
+
+            <ul class="flex gap-6 text-sm">
+                <li><a href="#home" class="hover:text-blue-400 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-400 transition">About</a></li>
+                <li><a href="#portfolio" class="hover:text-blue-400 transition">Portfolio</a></li>
+                <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Spacer -->
+    <div class="h-20"></div>
+
+    <!-- HERO -->
+    <section id="home" class="min-h-screen flex items-center justify-center text-center px-4">
+
+        <div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                Halo, Saya <span class="text-blue-400">Ade Ainun Najib</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-gray-300 mb-6">
+                Web Developer
+            </p>
+
+            <p class="text-gray-400 mb-6">
+                Saya membangun website modern dan responsif
+            </p>
+
+            <a href="#portfolio"
+               class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg transition">
+               Lihat Portfolio
+            </a>
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 px-4">
+
+        <div class="max-w-3xl mx-auto text-center fade-in">
+
+            <h2 class="text-3xl font-bold mb-6">About Me</h2>
+
+            <p class="text-gray-300 leading-relaxed">
+                Saya adalah seorang Web Developer yang fokus pada pembuatan website modern,
+                responsif, dan efisien menggunakan HTML, CSS, JavaScript, dan backend seperti PHP.
+            </p>
+
+            <p class="mt-4 text-gray-400">
+                Saya siap belajar dan berkembang di dunia web development serta terbuka untuk peluang kerja maupun PKL.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- PORTFOLIO -->
+    <!-- PORTFOLIO -->
+<section id="portfolio" class="py-20 px-4">
+
+    <div class="max-w-6xl mx-auto">
+
+        <h2 class="text-3xl font-bold text-center mb-10 fade-in">
+            Portfolio
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+            <!-- ITEM 1 -->
+            <a href="project-CAFE.html" class="block fade-in">
+
+                <div class="relative group overflow-hidden rounded-lg">
+                    <img src="assets/image/cafe-dashboard.png"
+                         class="w-full h-48 object-cover group-hover:scale-110 transition">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <p class="text-white">Lihat Detail</p>
+                    </div>
+                </div>
+
+                <!-- DESKRIPSI -->
+                <div class="mt-3">
+                    <h3 class="text-lg font-semibold">Website Admin Cafe</h3>
+                    <p class="text-sm text-gray-400">
+                        Sistem manajemen cafe untuk mengatur pesanan, menu, dan laporan penjualan.
+                    </p>
+                </div>
+
+            </a>
+
+            <!-- ITEM 2 -->
+      <!-- ITEM 2 -->
+<a href="project-wedding.html" class="block fade-in">
+
+    <div class="relative group overflow-hidden rounded-lg">
+        <img src="assets/image/wedding-home.png"
+             class="w-full h-48 object-cover group-hover:scale-110 transition">
+
+        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <p class="text-white">Lihat Detail</p>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <h3 class="text-lg font-semibold">Website Invitation Wedding</h3>
+        <p class="text-sm text-gray-400">
+            Website undangan pernikahan dengan fitur RSVP untuk konfirmasi kehadiran tamu.
+        </p>
+    </div>
+
+</a>
+<!-- ITEM 3 -->
+<a href="project-API.html" class="block fade-in">
+
+    <div class="relative group overflow-hidden rounded-lg">
+        <img src="assets/image/api.png"
+             class="w-full h-48 object-cover group-hover:scale-110 transition">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <p class="text-white">Lihat Detail</p>
+        </div>
+    </div>
+
+    <!-- DESKRIPSI -->
+    <div class="mt-3">
+        <h3 class="text-lg font-semibold">API Toko Online</h3>
+        <p class="text-sm text-gray-400">
+            REST API berbasis Laravel dengan autentikasi Bearer Token dan fitur CRUD produk serta upload gambar.
+        </p>
+    </div>
+
+</a>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 px-4">
+
+        <div class="max-w-3xl mx-auto text-center fade-in">
+
+            <h2 class="text-3xl font-bold mb-6">Contact</h2>
+
+            <p class="text-gray-300 mb-6">
+                Tertarik bekerja sama? Hubungi saya melalui kontak di bawah ini.
+            </p>
+
+            <div class="space-y-2">
+                <p>Email: <span class="text-blue-400">emailkamu@email.com</span></p>
+                <p>Instagram: <span class="text-blue-400">@username</span></p>
+                <p>GitHub: <span class="text-blue-400">github.com/username</span></p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 text-gray-400 text-sm">
+        © 2026 Ade Ainun Najib. All rights reserved.
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const elements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        elements.forEach(el => observer.observe(el));
+
+        // Ambil semua link navbar
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", function () {
+        const targetId = this.getAttribute("href");
+        const target = document.querySelector(targetId);
+
+        if (target) {
+            // Tambahkan efek highlight
+            target.classList.add("section-active");
+
+            // Hapus setelah animasi selesai
+            setTimeout(() => {
+                target.classList.remove("section-active");
+            }, 800);
+        }
+    });
+});
+    </script>
+
+</body>
+</html>

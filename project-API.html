@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 - API Toko Online</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- NAVBAR -->
+    <nav class="p-4">
+        <a href="index.html" class="text-blue-400 hover:underline">← Kembali ke Portfolio</a>
+    </nav>
+
+    <!-- CONTENT -->
+    <section class="max-w-5xl mx-auto px-4 py-10">
+
+        <!-- Judul -->
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">
+            Project 3 - API Toko Online
+        </h1>
+
+        <!-- Deskripsi -->
+        <p class="text-gray-300 mb-6">
+            RESTful API berbasis Laravel untuk manajemen produk dengan sistem autentikasi Bearer Token.
+            API ini mendukung fitur CRUD produk serta upload gambar menggunakan form-data.
+        </p>
+
+        <!-- Gambar utama -->
+        <img src="assets/image/api.png"
+             class="rounded-lg mb-6 w-full">
+
+        <!-- Teknologi -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Teknologi</h2>
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-blue-500 px-3 py-1 rounded text-sm">Laravel</span>
+                <span class="bg-blue-500 px-3 py-1 rounded text-sm">MySQL</span>
+                <span class="bg-blue-500 px-3 py-1 rounded text-sm">Postman</span>
+                <span class="bg-blue-500 px-3 py-1 rounded text-sm">REST API</span>
+            </div>
+        </div>
+
+        <!-- Fitur -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Fitur Utama</h2>
+            <ul class="list-disc list-inside text-gray-300 space-y-1">
+                <li>Login & autentikasi menggunakan Bearer Token</li>
+                <li>Proteksi endpoint (401 Unauthorized)</li>
+                <li>CRUD produk (Create, Read, Update, Delete)</li>
+                <li>Upload gambar produk</li>
+            </ul>
+        </div>
+
+        <!-- Autentikasi -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Autentikasi</h2>
+
+            <p class="text-gray-400 mb-2">
+                Endpoint dilindungi dan membutuhkan token untuk diakses.
+            </p>
+
+            <img src="assets/image/api-noaut.png" class="rounded mb-4">
+
+            <p class="text-gray-400 mb-2">
+                Login untuk mendapatkan token:
+            </p>
+
+            <img src="assets/image/api-login.png" class="rounded mb-4">
+
+            <p class="text-gray-400">
+                Gunakan token pada header Authorization untuk akses endpoint.
+            </p>
+        </div>
+
+        <!-- Endpoint -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Endpoint</h2>
+
+            <div class="bg-gray-800 p-4 rounded text-sm space-y-1">
+                <p>POST /api/login</p>
+                <p>GET /api/products</p>
+                <p>POST /api/products</p>
+                <p>DELETE /api/products/{id}</p>
+            </div>
+        </div>
+
+        <!-- Contoh Response -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Contoh Response</h2>
+
+            <img src="assets/image/get.png" class="rounded mb-4">
+            <img src="assets/image/post.png" class="rounded mb-4">
+            <img src="assets/image/delete.png" class="rounded">
+        </div>
+
+        <!-- Pembelajaran -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Yang Saya Pelajari</h2>
+
+            <ul class="list-disc list-inside text-gray-300 space-y-1">
+                <li>Implementasi autentikasi API dengan Bearer Token</li>
+                <li>Menggunakan middleware untuk proteksi route</li>
+                <li>Upload file menggunakan form-data</li>
+                <li>Struktur RESTful API di Laravel</li>
+            </ul>
+        </div>
+
+        <!-- Tombol -->
+        <div class="flex gap-4">
+            <a href="https://github.com/FlashDIvine/API-Store"
+              class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded"
+                target="_blank"
+   rel="noopener noreferrer"
+   class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded">
+   GitHub
+            </a>
+        </div>
+
+    </section>
+
+</body>
+</html>
