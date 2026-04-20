@@ -12,27 +12,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
     <style>
-      html {
-    scroll-behavior: smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.section-active {
-    animation: highlight 0.8s ease;
-}
+        .section-active {
+            animation: highlight 0.8s ease;
+        }
 
-@keyframes highlight {
-    0% {
-        background-color: rgba(59, 130, 246, 0.2);
-    }
-    100% {
-        background-color: transparent;
-    }
-}
+        @keyframes highlight {
+            0% { background-color: rgba(59, 130, 246, 0.2); }
+            100% { background-color: transparent; }
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
         }
 
-        /* ANIMASI */
         .fade-in {
             opacity: 0;
             transform: translateY(50px);
@@ -48,218 +44,197 @@
 
 <body class="bg-gray-900 text-white">
 
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 w-full bg-gray-900 shadow-md z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full bg-gray-900 shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
 
-            <h1 class="text-xl font-semibold text-blue-400">MyPortfolio</h1>
+        <h1 class="text-xl font-semibold text-blue-400">MyPortfolio</h1>
 
-            <ul class="flex gap-6 text-sm">
-                <li><a href="#home" class="hover:text-blue-400 transition">Home</a></li>
-                <li><a href="#about" class="hover:text-blue-400 transition">About</a></li>
-                <li><a href="#portfolio" class="hover:text-blue-400 transition">Portfolio</a></li>
-                <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
-            </ul>
+        <ul class="flex gap-6 text-sm">
+            <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+            <li><a href="#about" class="hover:text-blue-400">About</a></li>
+            <li><a href="#portfolio" class="hover:text-blue-400">Portfolio</a></li>
+            <li><a href="#certificate" class="hover:text-blue-400">Certificate</a></li>
+            <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+        </ul>
 
-        </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Spacer -->
-    <div class="h-20"></div>
+<div class="h-20"></div>
 
-    <!-- HERO -->
-    <section id="home" class="min-h-screen flex items-center justify-center text-center px-4">
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center justify-center text-center px-4">
+    <div>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+            Halo, Saya <span class="text-blue-400">Ade Ainun Najib</span>
+        </h1>
 
-        <div>
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">
-                Halo, Saya <span class="text-blue-400">Ade Ainun Najib</span>
-            </h1>
+        <p class="text-lg text-gray-300 mb-4">
+            Junior Full Stack Developer
+        </p>
 
-            <p class="text-lg md:text-xl text-gray-300 mb-6">
-                Web Developer
-            </p>
+        <p class="text-gray-400 mb-6">
+            Fokus pada Backend & REST API menggunakan Laravel
+        </p>
 
-            <p class="text-gray-400 mb-6">
-                Saya membangun website modern dan responsif
-            </p>
+        <a href="#portfolio"
+           class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg">
+           Lihat Portfolio
+        </a>
+    </div>
+</section>
 
-            <a href="#portfolio"
-               class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg transition">
-               Lihat Portfolio
-            </a>
-        </div>
+<!-- ABOUT -->
+<section id="about" class="py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center fade-in">
+        <h2 class="text-3xl font-bold mb-6">About Me</h2>
 
-    </section>
+        <p class="text-gray-300 leading-relaxed">
+            Saya adalah pelajar Rekayasa Perangkat Lunak yang fokus pada pengembangan backend dan RESTful API menggunakan Laravel.
+            Berpengalaman dalam membangun sistem CRUD, autentikasi, serta pengelolaan database menggunakan MySQL.
+        </p>
 
-    <!-- ABOUT -->
-    <section id="about" class="py-20 px-4">
+        <p class="mt-4 text-gray-400">
+            Saya terus belajar dan mengembangkan kemampuan untuk menjadi backend developer profesional.
+        </p>
+    </div>
+</section>
 
-        <div class="max-w-3xl mx-auto text-center fade-in">
-
-            <h2 class="text-3xl font-bold mb-6">About Me</h2>
-
-            <p class="text-gray-300 leading-relaxed">
-                Saya adalah seorang Web Developer yang fokus pada pembuatan website modern,
-                responsif, dan efisien menggunakan HTML, CSS, JavaScript, dan backend seperti PHP.
-            </p>
-
-            <p class="mt-4 text-gray-400">
-                Saya siap belajar dan berkembang di dunia web development serta terbuka untuk peluang kerja maupun PKL.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- PORTFOLIO -->
-    <!-- PORTFOLIO -->
+<!-- PORTFOLIO -->
 <section id="portfolio" class="py-20 px-4">
-
     <div class="max-w-6xl mx-auto">
 
-        <h2 class="text-3xl font-bold text-center mb-10 fade-in">
-            Portfolio
-        </h2>
+        <h2 class="text-3xl font-bold text-center mb-10 fade-in">Portfolio</h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-            <!-- ITEM 1 -->
+            <!-- CAFE -->
             <a href="project-CAFE.html" class="block fade-in">
-
                 <div class="relative group overflow-hidden rounded-lg">
                     <img src="assets/image/cafe-dashboard.png"
                          class="w-full h-48 object-cover group-hover:scale-110 transition">
 
-                    <!-- Overlay -->
                     <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                        <p class="text-white">Lihat Detail</p>
+                        <p>Lihat Detail</p>
                     </div>
                 </div>
 
-                <!-- DESKRIPSI -->
                 <div class="mt-3">
-                    <h3 class="text-lg font-semibold">Website Admin Cafe</h3>
-                    <p class="text-sm text-gray-400">
-                        Sistem manajemen cafe untuk mengatur pesanan, menu, dan laporan penjualan.
-                    </p>
+                    <h3 class="text-lg font-semibold">Admin Cafe</h3>
+                    <p class="text-sm text-gray-400">Sistem manajemen cafe berbasis Laravel.</p>
+                </div>
+            </a>
+
+            <!-- WEDDING -->
+            <a href="project-wedding.html" class="block fade-in">
+                <div class="relative group overflow-hidden rounded-lg">
+                    <img src="assets/image/wedding-home.png"
+                         class="w-full h-48 object-cover group-hover:scale-110 transition">
+
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <p>Lihat Detail</p>
+                    </div>
                 </div>
 
+                <div class="mt-3">
+                    <h3 class="text-lg font-semibold">Wedding Invitation</h3>
+                    <p class="text-sm text-gray-400">Website undangan dengan fitur RSVP.</p>
+                </div>
             </a>
 
-            <!-- ITEM 2 -->
-      <!-- ITEM 2 -->
-<a href="project-wedding.html" class="block fade-in">
+            <!-- API -->
+            <a href="project-API.html" class="block fade-in">
+                <div class="relative group overflow-hidden rounded-lg">
+                    <img src="assets/image/api.png"
+                         class="w-full h-48 object-cover group-hover:scale-110 transition">
 
-    <div class="relative group overflow-hidden rounded-lg">
-        <img src="assets/image/wedding-home.png"
-             class="w-full h-48 object-cover group-hover:scale-110 transition">
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                        <p>Lihat Detail</p>
+                    </div>
+                </div>
 
-        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-            <p class="text-white">Lihat Detail</p>
-        </div>
-    </div>
-
-    <div class="mt-3">
-        <h3 class="text-lg font-semibold">Website Invitation Wedding</h3>
-        <p class="text-sm text-gray-400">
-            Website undangan pernikahan dengan fitur RSVP untuk konfirmasi kehadiran tamu.
-        </p>
-    </div>
-
-</a>
-<!-- ITEM 3 -->
-<a href="project-API.html" class="block fade-in">
-
-    <div class="relative group overflow-hidden rounded-lg">
-        <img src="assets/image/api.png"
-             class="w-full h-48 object-cover group-hover:scale-110 transition">
-
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-            <p class="text-white">Lihat Detail</p>
-        </div>
-    </div>
-
-    <!-- DESKRIPSI -->
-    <div class="mt-3">
-        <h3 class="text-lg font-semibold">API Toko Online</h3>
-        <p class="text-sm text-gray-400">
-            REST API berbasis Laravel dengan autentikasi Bearer Token dan fitur CRUD produk serta upload gambar.
-        </p>
-    </div>
-
-</a>
-
+                <div class="mt-3">
+                    <h3 class="text-lg font-semibold">API Toko Online</h3>
+                    <p class="text-sm text-gray-400">REST API Laravel dengan autentikasi dan CRUD.</p>
+                </div>
             </a>
 
         </div>
-
     </div>
-
 </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-20 px-4">
+<!-- CERTIFICATE -->
+<section id="certificate" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
 
-        <div class="max-w-3xl mx-auto text-center fade-in">
+        <h2 class="text-3xl font-bold text-center mb-10 fade-in">Certificate</h2>
 
-            <h2 class="text-3xl font-bold mb-6">Contact</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-            <p class="text-gray-300 mb-6">
-                Tertarik bekerja sama? Hubungi saya melalui kontak di bawah ini.
-            </p>
+            <div class="fade-in bg-gray-800 rounded-lg overflow-hidden">
+                <img src="assets/image/digiup.png"
+                     class="w-full h-48 object-cover hover:scale-105 transition">
 
-            <div class="space-y-2">
-                <p>Email: <span class="text-blue-400">emailkamu@email.com</span></p>
-                <p>Instagram: <span class="text-blue-400">@username</span></p>
-                <p>GitHub: <span class="text-blue-400">github.com/username</span></p>
-            </div>
+             <div class="p-4">
+    <h3 class="font-semibold text-lg">
+        Laravel Web Programmer
+    </h3>
+
+    <p class="text-sm text-gray-400">
+        Telkom DigiUp 2025
+    </p>
+
+    <p class="text-xs text-gray-500 mt-2">
+        Certified • Backend • REST API
+    </p>
+
+    <a href="sertifdigiup.html"
+       target="_blank"
+       class="text-blue-400 text-sm hover:underline mt-3 inline-block">
+       Lihat Sertifikat →
+    </a>
+</div>
 
         </div>
+    </div>
+</section>
 
-    </section>
+<!-- CONTACT -->
+<section id="contact" class="py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center fade-in">
 
-    <!-- FOOTER -->
-    <footer class="text-center py-6 text-gray-400 text-sm">
-        © 2026 Ade Ainun Najib. All rights reserved.
-    </footer>
+        <h2 class="text-3xl font-bold mb-6">Contact</h2>
 
-    <!-- JAVASCRIPT -->
-    <script>
-        const elements = document.querySelectorAll('.fade-in');
+        <p class="text-gray-300 mb-6">
+            Hubungi saya melalui:
+        </p>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        }, {
-            threshold: 0.2
-        });
+        <div class="space-y-2">
+            <p>Email: <span class="text-blue-400">najibilharam@email.com</span></p>
+            <p>GitHub: <span class="text-blue-400">github.com/FlashDIvine</span></p>
+        </div>
 
-        elements.forEach(el => observer.observe(el));
+    </div>
+</section>
 
-        // Ambil semua link navbar
-const navLinks = document.querySelectorAll("nav a");
+<footer class="text-center py-6 text-gray-400 text-sm">
+    © 2026 Ade Ainun Najib
+</footer>
 
-navLinks.forEach(link => {
-    link.addEventListener("click", function () {
-        const targetId = this.getAttribute("href");
-        const target = document.querySelector(targetId);
+<script>
+const elements = document.querySelectorAll('.fade-in');
 
-        if (target) {
-            // Tambahkan efek highlight
-            target.classList.add("section-active");
-
-            // Hapus setelah animasi selesai
-            setTimeout(() => {
-                target.classList.remove("section-active");
-            }, 800);
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
         }
     });
-});
-    </script>
+}, { threshold: 0.2 });
+
+elements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
