@@ -39,6 +39,42 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        @media print {
+
+  /* Hilangkan navbar */
+  nav {
+    display: none;
+  }
+
+  /* Reset layout */
+  body {
+    background: white;
+    color: black;
+  }
+
+  section {
+    padding: 40px 20px;
+    page-break-inside: avoid;
+  }
+
+  /* Hero jangan fullscreen */
+  #home {
+    min-height: auto;
+  }
+
+  /* Matikan animasi */
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Hilangkan hover effect */
+  .group-hover\:scale-110 {
+    transform: none !important;
+  }
+}
+
     </style>
 </head>
 
