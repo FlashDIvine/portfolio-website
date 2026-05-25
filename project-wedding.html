@@ -3,158 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitation Wedding</title>
-
-    <!-- Tailwind -->
+    <title>Project Detail - Wedding Invitation & RSVP</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Detail Proyek Wedding Invitation oleh Ade Ainun Najib - Undangan digital interaktif dengan konfirmasi email otomatis dan QR code ticket.">
+    <meta name="author" content="Ade Ainun Najib">
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
         }
     </style>
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 min-h-screen flex flex-col antialiased">
 
     <!-- NAVBAR -->
-    <nav class="p-4">
-        <a href="index.html" class="text-blue-400 hover:underline">← Kembali ke Portfolio</a>
-    </nav>
+    <header class="sticky top-0 z-50 bg-zinc-50/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-sm font-semibold hover:text-brand-500 transition-colors inline-flex items-center gap-2" aria-label="Kembali ke Portfolio Utama">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Kembali ke Portfolio
+            </a>
+            <span class="text-sm font-bold tracking-tight">Ade Ainun<span class="text-brand-500">.</span></span>
+        </div>
+    </header>
 
     <!-- CONTENT -->
-    <section class="max-w-5xl mx-auto px-4 py-10">
+    <main class="flex-grow max-w-4xl mx-auto px-6 py-12 space-y-12">
+        <!-- Judul Proyek -->
+        <header class="space-y-4">
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
+                Wedding Invitation & RSVP
+            </h1>
+            <p class="text-zinc-500 dark:text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl">
+                Website undangan pernikahan digital interaktif dengan sistem registrasi kehadiran (RSVP), notifikasi email otomatis terintegrasi QR Code Ticket, serta validasi kehadiran (Check-in) tamu di lokasi acara.
+            </p>
+        </header>
 
-        <!-- JUDUL -->
-        <h1 class="text-3xl md:text-4xl font-bold mb-4">
-            Website Invitation Wedding
-        </h1>
+        <!-- Preview Image Utama -->
+        <div class="relative overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900">
+            <img src="assets/image/wedding-home.png" alt="Screenshot Undangan Pernikahan Digital" class="w-full h-auto object-cover">
+        </div>
 
-        <!-- DESKRIPSI -->
-        <p class="text-gray-300 mb-6">
-            Website undangan pernikahan berbasis web yang memungkinkan tamu melihat informasi acara,
-            melakukan RSVP, menerima email konfirmasi otomatis, serta mendapatkan QR code sebagai tiket digital.
-        </p>
+        <!-- Detail Spesifikasi Proyek -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
+            <!-- Left Side: Tech and Details -->
+            <div class="space-y-6 md:col-span-1">
+                <div>
+                    <h2 class="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider mb-2">Teknologi</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded text-xs font-medium bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">Laravel</span>
+                        <span class="px-2.5 py-1 rounded text-xs font-medium bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">Blade</span>
+                        <span class="px-2.5 py-1 rounded text-xs font-medium bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">MySQL</span>
+                        <span class="px-2.5 py-1 rounded text-xs font-medium bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">Laravel Mail</span>
+                        <span class="px-2.5 py-1 rounded text-xs font-medium bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">QR Code</span>
+                    </div>
+                </div>
 
-        <!-- GAMBAR UTAMA -->
-        <img src="assets/image/wedding-home.png"
-             class="rounded-lg mb-8 w-full">
+                <div class="pt-2">
+                    <h2 class="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider mb-3">Tautan Proyek</h2>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://github.com/FlashDIvine/nikahan-pas" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg text-xs font-bold text-center bg-zinc-900 text-white dark:bg-white dark:text-zinc-950 hover:bg-zinc-800 dark:hover:bg-zinc-100 transition shadow-sm">
+                            GitHub Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-      <div class="mb-8">
-    <h2 class="text-xl font-semibold mb-4">Preview Website</h2>
+            <!-- Right Side: Content and Details -->
+            <div class="space-y-6 md:col-span-2">
+                <!-- Fitur Utama -->
+                <div class="space-y-3">
+                    <h2 class="text-lg font-bold text-zinc-900 dark:text-white">Fitur Utama</h2>
+                    <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-500 font-bold mt-0.5">•</span>
+                            <span><strong>Halaman Informasi Acara:</strong> Navigasi interaktif peta lokasi (Google Maps API), galeri foto pre-wedding, dan countdown waktu mundur.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-500 font-bold mt-0.5">•</span>
+                            <span><strong>Formulir RSVP Tamu:</strong> Validasi input nama dan status konfirmasi kehadiran tamu yang tersimpan langsung ke MySQL.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-500 font-bold mt-0.5">•</span>
+                            <span><strong>Notifikasi Email Otomatis:</strong> Pengiriman email konfirmasi (SMTP Laravel Mail) secara asinkron setelah tamu melakukan registrasi.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-500 font-bold mt-0.5">•</span>
+                            <span><strong>Tiket QR Code Dinamis:</strong> Pembuatan QR Code unik berisi ID Tamu terenkripsi untuk divalidasi oleh panitia di hari pernikahan.</span>
+                        </li>
+                    </ul>
+                </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-[200px]">
+                <!-- Cara Kerja -->
+                <div class="space-y-3">
+                    <h2 class="text-lg font-bold text-zinc-900 dark:text-white">Bagaimana Sistem Bekerja?</h2>
+                    <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                        Tamu mengisi form konfirmasi kehadiran (RSVP) di website undangan. Data disimpan di database, lalu sistem memicu event email queue untuk mengirimkan email berisi tiket QR Code. Saat hari pelaksanaan acara, panitia memindai QR Code tamu menggunakan aplikasi pemindai berbasis web. Sistem melakukan validasi token database secara real-time untuk mencatat jam kedatangan tamu dan memblokir tiket ganda.
+                    </p>
+                </div>
 
-        <!-- GAMBAR 1 -->
-       <img src="assets/image/wedding-home.png"
-     class="gallery-img rounded-lg w-full h-full object-cover hover:scale-105 transition cursor-pointer">
+                <!-- Preview Galeri & Lightbox -->
+                <div class="space-y-4 pt-2">
+                    <h2 class="text-lg font-bold text-zinc-900 dark:text-white">Preview Antarmuka Undangan</h2>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400">Klik gambar untuk memperbesar preview.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-semibold text-zinc-500">Beranda Undangan</span>
+                            <img src="assets/image/wedding-home.png" alt="Tampilan Beranda Undangan" class="gallery-img rounded-lg border border-zinc-200 dark:border-zinc-800 w-full object-cover h-32 cursor-pointer hover:opacity-90 transition" onclick="openLightbox(this.src)">
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-semibold text-zinc-500">Notifikasi Email & QR Ticket</span>
+                            <img src="assets/image/wedding-email.png" alt="Tampilan Contoh Email Tiket" class="gallery-img rounded-lg border border-zinc-200 dark:border-zinc-800 w-full object-cover h-32 cursor-pointer hover:opacity-90 transition" onclick="openLightbox(this.src)">
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-semibold text-zinc-500">Form Konfirmasi RSVP</span>
+                            <img src="assets/image/wedding-RSVP.png" alt="Tampilan Form RSVP" class="gallery-img rounded-lg border border-zinc-200 dark:border-zinc-800 w-full object-cover h-32 cursor-pointer hover:opacity-90 transition" onclick="openLightbox(this.src)">
+                        </div>
+                    </div>
+                </div>
 
-<img src="assets/image/wedding-email.png"
-     class="gallery-img rounded-lg w-full h-full object-cover row-span-2 hover:scale-105 transition cursor-pointer">
-
-<img src="assets/image/wedding-RSVP.png"
-     class="gallery-img rounded-lg w-full h-full object-cover hover:scale-105 transition cursor-pointer">
-
-    </div>
-</div>
-<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50">
-
-    <!-- Gambar besar -->
-    <img id="lightbox-img" class="max-w-4xl w-full rounded-lg">
-
-    <!-- Tombol close -->
-    <button id="close-lightbox"
-            class="absolute top-5 right-5 text-white text-3xl">&times;</button>
-
-</div>
-        <!-- TEKNOLOGI -->
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold mb-2">Teknologi</h2>
-            <div class="flex flex-wrap gap-2">
-                <span class="bg-blue-500 px-3 py-1 rounded text-sm">Laravel</span>
-                <span class="bg-blue-500 px-3 py-1 rounded text-sm">Blade</span>
-                <span class="bg-blue-500 px-3 py-1 rounded text-sm">MySQL</span>
-                <span class="bg-blue-500 px-3 py-1 rounded text-sm">Laravel Mail</span>
-                <span class="bg-blue-500 px-3 py-1 rounded text-sm">QR Code Generator</span>
+                <!-- Yang Dipelajari -->
+                <div class="space-y-3 pt-2">
+                    <h2 class="text-lg font-bold text-zinc-900 dark:text-white">Pembelajaran & Kompetensi</h2>
+                    <ul class="space-y-1 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-500">✔</span>
+                            <span>Integrasi SMTP mail server dan templating email HTML Laravel</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-500">✔</span>
+                            <span>Instansiasi QR Code Generator menggunakan composer package</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-500">✔</span>
+                            <span>Mekanisme validasi tiket offline menggunakan data online</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-500">✔</span>
+                            <span>Pemrograman asinkronus (Job Queueing) pada Laravel</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </main>
 
-        <!-- FITUR -->
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold mb-2">Fitur Utama</h2>
-            <ul class="list-disc list-inside text-gray-300 space-y-1">
-                <li>Halaman informasi pernikahan</li>
-                <li>RSVP (konfirmasi kehadiran tamu)</li>
-                <li>Pengiriman email konfirmasi otomatis</li>
-                <li>Pembuatan QR code sebagai tiket tamu</li>
-                <li>Validasi tamu menggunakan QR code saat acara</li>
-                <li>Desain responsif (mobile-friendly)</li>
-                <li>Manajemen data tamu (backend)</li>
-            </ul>
-        </div>
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 py-8 text-center transition-colors duration-300">
+        <p class="text-xs text-zinc-500 dark:text-zinc-400">
+            © 2026 Ade Ainun Najib. Hak Cipta Dilindungi.
+        </p>
+    </footer>
 
-        <!-- PENJELASAN -->
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold mb-2">Cara Kerja Sistem</h2>
+    <!-- Native Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-zinc-950/90 p-4 transition-opacity duration-300" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white hover:text-zinc-300 transition-colors" aria-label="Close Lightbox">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <img id="lightbox-img" src="" alt="Perbesaran preview undangan" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl transition-transform duration-300" onclick="event.stopPropagation()">
+    </div>
 
-            <p class="text-gray-300 mb-3">
-                Tamu mengakses website undangan dan mengisi form RSVP untuk mengonfirmasi kehadiran.
-                Data yang diinput akan disimpan ke dalam database.
-            </p>
-
-            <p class="text-gray-300 mb-3">
-                Setelah RSVP berhasil, sistem secara otomatis mengirimkan email konfirmasi kepada tamu
-                yang berisi detail acara serta QR code unik sebagai tiket masuk.
-            </p>
-
-            <p class="text-gray-300">
-                QR code tersebut digunakan saat hari acara sebagai validasi kehadiran tamu,
-                sehingga proses check-in menjadi lebih cepat, praktis, dan terorganisir.
-            </p>
-        </div>
-
-        <!-- BUTTON -->
-        <div class="flex gap-4">
-           
-
-            <a href="https://github.com/FlashDIvine/nikahan-pas"
-               target="_blank"
-   rel="noopener noreferrer"
-   class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded">
-   GitHub
-</a>
-        </div>
-
-    </section>
-
+    <!-- Lightbox Script -->
     <script>
-    const images = document.querySelectorAll('.gallery-img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeBtn = document.getElementById('close-lightbox');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
 
-    images.forEach(img => {
-        img.addEventListener('click', () => {
+        function openLightbox(src) {
+            lightboxImg.src = src;
             lightbox.classList.remove('hidden');
             lightbox.classList.add('flex');
-            lightboxImg.src = img.src;
-        });
-    });
-
-    closeBtn.addEventListener('click', () => {
-        lightbox.classList.add('hidden');
-    });
-
-    // Klik background untuk close
-    lightbox.addEventListener('click', (e) => {
-        if (e.target !== lightboxImg) {
-            lightbox.classList.add('hidden');
+            document.body.classList.add('overflow-hidden');
         }
-    });
-</script>
 
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
 </body>
 </html>

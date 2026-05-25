@@ -3,134 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 3 - API Toko Online</title>
-
-    <!-- Tailwind -->
+    <title>Project Detail - API Toko Online</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Detail Proyek API Toko Online oleh Ade Ainun Najib - RESTful API berbasis Laravel dengan Bearer Token Authentication.">
+    <meta name="author" content="Ade Ainun Najib">
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
         }
     </style>
+    
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 min-h-screen flex flex-col antialiased">
 
     <!-- NAVBAR -->
-    <nav class="p-4">
-        <a href="index.html" class="text-blue-400 hover:underline">← Kembali ke Portfolio</a>
-    </nav>
+    <header class="sticky top-0 z-50 bg-zinc-50/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-sm font-semibold hover:text-brand-500 transition-colors inline-flex items-center gap-2" aria-label="Kembali ke Portfolio Utama">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Kembali ke Portfolio
+            </a>
+            <span class="text-sm font-bold tracking-tight">Ade Ainun<span class="text-brand-500">.</span></span>
+        </div>
+    </header>
 
     <!-- CONTENT -->
-    <section class="max-w-5xl mx-auto px-4 py-10">
+    <main class="flex-grow max-w-4xl mx-auto px-6 py-12 space-y-12">
+        <!-- Judul Proyek -->
+        <header class="space-y-4">
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
+                API Toko Online
+            </h1>
+            <p class="text-zinc-500 dark:text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl">
+                RESTful API yang tangguh untuk sistem e-commerce. Dibangun di atas Laravel, API ini menangani otentikasi token Bearer, validasi payload request, manajemen CRUD produk, serta upload gambar secara aman.
+            </p>
+        </header>
 
-        <!-- Judul -->
-        <h1 class="text-3xl md:text-4xl font-bold mb-4">
-            Project 3 - API Toko Online
-        </h1>
+        <!-- Preview Image Utama -->
+        <div class="relative overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900">
+            <img src="assets/image/api.png" alt="Screenshot Utama Postman API Toko Online" class="w-full h-auto object-cover">
+        </div>
 
-        <!-- Deskripsi -->
-        <p class="text-gray-300 mb-6">
-            RESTful API berbasis Laravel untuk manajemen produk dengan sistem autentikasi Bearer Token.
-            API ini mendukung fitur CRUD produk serta upload gambar menggunakan form-data.
+        <!-- Detail Spesifikasi Proyek -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
+            <!-- Left Side: Tech and Details -->
+            <div class="space-y-6 md:col-span-1">
+                <div>
+                    <h2 class="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider mb-2">Teknologi</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded text-xs font-medium bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">Laravel</span>
+                        <span class="px-2.5 py-1 rounded text-xs font-medium bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">MySQL</span>
+                        <span class="px-2.5 py-1 rounded text-xs font-medium bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">REST API</span>
+                        <span class="px-2.5 py-1 rounded text-xs font-medium bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">Postman</span>
+                        <span class="px-2.5 py-1 rounded text-xs font-medium bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">Bearer Token</span>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <h2 class="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider mb-3">Tautan Proyek</h2>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://github.com/FlashDIvine/API-Store" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg text-xs font-bold text-center bg-zinc-900 text-white dark:bg-white dark:text-zinc-950 hover:bg-zinc-800 dark:hover:bg-zinc-100 transition shadow-sm">
+                            GitHub Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Content and Details -->
+            <div class="space-y-6 md:col-span-2">
+                <!-- Fitur Utama -->
+                <div class="space-y-3">
+                    <h2 class="text-lg font-bold text-zinc-900 dark:text-white">Fitur Utama</h2>
+                    <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-500 font-bold mt-0.5">•</span>
+                            <span><strong>Bearer Token Authentication:</strong> Login pengguna yang menghasilkan API Token unik untuk mengamankan komunikasi data.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-500 font-bold mt-0.5">•</span>
+                            <span><strong>Middleware Route Protection:</strong> Pencegahan akses ilegal pada endpoint sensitif (menghasilkan respons 401 Unauthorized jika tanpa token).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-500 font-bold mt-0.5">•</span>
+                            <span><strong>Full Product CRUD:</strong> Operasi lengkap penciptaan (Create), pembacaan (Read), pembaharuan (Update), dan penghapusan (Delete) produk.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-500 font-bold mt-0.5">•</span>
+                            <span><strong>Image Upload Handler:</strong> Mengamankan proses upload berkas gambar produk menggunakan form-data dan menyimpannya di file system.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- API Endpoints -->
+                <div class="space-y-3">
+                    <h2 class="text-lg font-bold text-zinc-900 dark:text-white">Daftar Endpoint API</h2>
+                    <div class="overflow-x-auto rounded-lg border border-zinc-200 dark:border-zinc-800 text-xs">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 font-semibold">
+                                    <th class="p-3">Method</th>
+                                    <th class="p-3">Endpoint</th>
+                                    <th class="p-3">Keterangan</th>
+                                    <th class="p-3">Otentikasi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-zinc-200 dark:divide-zinc-800 text-zinc-600 dark:text-zinc-400">
+                                <tr>
+                                    <td class="p-3 font-bold text-blue-600 dark:text-blue-400">POST</td>
+                                    <td class="p-3 font-mono">/api/login</td>
+                                    <td class="p-3">Login untuk mengambil Bearer Token</td>
+                                    <td class="p-3 text-red-500 font-medium">Bebas</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">GET</td>
+                                    <td class="p-3 font-mono">/api/products</td>
+                                    <td class="p-3">Mendapatkan list semua produk</td>
+                                    <td class="p-3 text-brand-500 font-medium">Wajib</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-blue-600 dark:text-blue-400">POST</td>
+                                    <td class="p-3 font-mono">/api/products</td>
+                                    <td class="p-3">Menambah produk baru & upload gambar</td>
+                                    <td class="p-3 text-brand-500 font-medium">Wajib</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-red-600 dark:text-red-400">DELETE</td>
+                                    <td class="p-3 font-mono">/api/products/{id}</td>
+                                    <td class="p-3">Menghapus produk berdasarkan ID</td>
+                                    <td class="p-3 text-brand-500 font-medium">Wajib</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Preview / Screenshot Autentikasi -->
+                <div class="space-y-4 pt-2">
+                    <h2 class="text-lg font-bold text-zinc-900 dark:text-white">Alur Autentikasi & Respons</h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-xs font-semibold text-zinc-500 dark:text-zinc-400 mb-2">1. Proteksi Endpoint (Tanpa Token - 401 Unauthorized)</p>
+                            <img src="assets/image/api-noaut.png" alt="Screenshot Respon 401 Unauthorized" class="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full" loading="lazy">
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold text-zinc-500 dark:text-zinc-400 mb-2">2. Pengambilan Bearer Token melalui Login</p>
+                            <img src="assets/image/api-login.png" alt="Screenshot Respon Login dengan Token" class="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full" loading="lazy">
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold text-zinc-500 dark:text-zinc-400 mb-2">3. Contoh Struktur Output API (GET, POST, & DELETE)</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <img src="assets/image/get.png" alt="GET Response" class="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full object-cover h-32" loading="lazy">
+                                <img src="assets/image/post.png" alt="POST Response" class="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full object-cover h-32" loading="lazy">
+                                <img src="assets/image/delete.png" alt="DELETE Response" class="rounded-lg border border-zinc-200 dark:border-zinc-800 w-full object-cover h-32" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yang Dipelajari -->
+                <div class="space-y-3 pt-2">
+                    <h2 class="text-lg font-bold text-zinc-900 dark:text-white">Pembelajaran & Kompetensi</h2>
+                    <ul class="space-y-1 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-500">✔</span>
+                            <span>Mekanisme autentikasi API berbasis token keamanan</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-500">✔</span>
+                            <span>Manajemen middleware routing untuk enkapsulasi endpoint</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-500">✔</span>
+                            <span>Pengolahan data multipart/form-data dan validasi berkas</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-500">✔</span>
+                            <span>Penyusunan kode status HTTP (200, 201, 401, 422) sesuai standar REST</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 py-8 text-center transition-colors duration-300">
+        <p class="text-xs text-zinc-500 dark:text-zinc-400">
+            © 2026 Ade Ainun Najib. Hak Cipta Dilindungi.
         </p>
-
-        <!-- Gambar utama -->
-        <img src="assets/image/api.png"
-             class="rounded-lg mb-6 w-full">
-
-        <!-- Teknologi -->
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold mb-2">Teknologi</h2>
-            <div class="flex flex-wrap gap-2">
-                <span class="bg-blue-500 px-3 py-1 rounded text-sm">Laravel</span>
-                <span class="bg-blue-500 px-3 py-1 rounded text-sm">MySQL</span>
-                <span class="bg-blue-500 px-3 py-1 rounded text-sm">Postman</span>
-                <span class="bg-blue-500 px-3 py-1 rounded text-sm">REST API</span>
-            </div>
-        </div>
-
-        <!-- Fitur -->
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold mb-2">Fitur Utama</h2>
-            <ul class="list-disc list-inside text-gray-300 space-y-1">
-                <li>Login & autentikasi menggunakan Bearer Token</li>
-                <li>Proteksi endpoint (401 Unauthorized)</li>
-                <li>CRUD produk (Create, Read, Update, Delete)</li>
-                <li>Upload gambar produk</li>
-            </ul>
-        </div>
-
-        <!-- Autentikasi -->
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold mb-2">Autentikasi</h2>
-
-            <p class="text-gray-400 mb-2">
-                Endpoint dilindungi dan membutuhkan token untuk diakses.
-            </p>
-
-            <img src="assets/image/api-noaut.png" class="rounded mb-4">
-
-            <p class="text-gray-400 mb-2">
-                Login untuk mendapatkan token:
-            </p>
-
-            <img src="assets/image/api-login.png" class="rounded mb-4">
-
-            <p class="text-gray-400">
-                Gunakan token pada header Authorization untuk akses endpoint.
-            </p>
-        </div>
-
-        <!-- Endpoint -->
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold mb-2">Endpoint</h2>
-
-            <div class="bg-gray-800 p-4 rounded text-sm space-y-1">
-                <p>POST /api/login</p>
-                <p>GET /api/products</p>
-                <p>POST /api/products</p>
-                <p>DELETE /api/products/{id}</p>
-            </div>
-        </div>
-
-        <!-- Contoh Response -->
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold mb-2">Contoh Response</h2>
-
-            <img src="assets/image/get.png" class="rounded mb-4">
-            <img src="assets/image/post.png" class="rounded mb-4">
-            <img src="assets/image/delete.png" class="rounded">
-        </div>
-
-        <!-- Pembelajaran -->
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold mb-2">Yang Saya Pelajari</h2>
-
-            <ul class="list-disc list-inside text-gray-300 space-y-1">
-                <li>Implementasi autentikasi API dengan Bearer Token</li>
-                <li>Menggunakan middleware untuk proteksi route</li>
-                <li>Upload file menggunakan form-data</li>
-                <li>Struktur RESTful API di Laravel</li>
-            </ul>
-        </div>
-
-        <!-- Tombol -->
-        <div class="flex gap-4">
-            <a href="https://github.com/FlashDIvine/API-Store"
-              class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded"
-                target="_blank"
-   rel="noopener noreferrer"
-   class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded">
-   GitHub
-            </a>
-        </div>
-
-    </section>
+    </footer>
 
 </body>
 </html>
